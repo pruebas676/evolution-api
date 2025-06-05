@@ -11,8 +11,7 @@ WORKDIR /evolution
 
 COPY ./package.json ./tsconfig.json ./
 
-RUN npm install --verbose
-
+RUN npm install --verbose || (echo "--- INICIO DEL LOG DE DEBUG DE NPM ---" && cat /root/.npm/_logs/*-debug-0.log && echo "--- FIN DEL LOG DE DEBUG DE NPM ---" && exit 1)
 COPY ./src ./src
 COPY ./public ./public
 COPY ./prisma ./prisma

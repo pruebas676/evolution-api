@@ -21,7 +21,8 @@
     "migration:generate": "npm run typeorm -- migration:generate",
     "migration:run": "npm run typeorm -- migration:run",
     "migration:revert": "npm run typeorm -- migration:revert",
-    "start:prod": "node dist/main.js" // <--- Este script es el importante},
+    "start:prod": "node dist/main.js" // <--- Este script es el importante
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EvolutionAPI/evolution-api.git"
